@@ -11,7 +11,7 @@ import pandas as pd
 import datetime as dt
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-# praw import should be inside try if you want skip-safety
+# Try importing praw safely
 try:
     import praw
     PRAW_OK = True
@@ -41,23 +41,38 @@ def fetch_reddit(character, banner_start):
             "reddit_posts_14d_pre": 0,
             "reddit_sentiment_14d_pre": 0.0
         }
+
     analyzer = SentimentIntensityAnalyzer()
-    start_dt = pd.to_datetime(banner_start) - pd.Timedelta(days=PRE_BANNER_DAYS)
+
+    # Safe unified datetime conversion
+    banner_start = pd.to_datetime(banner_start)
+    start_dt = banner_start - pd.Timedelta(days=PRE_BANNER_DAYS)
 
     posts = []
+
     for sub in SUBREDDITS:
         for post in r.subreddit(sub).search(character, time_filter="month", limit=500):
+
             created = dt.datetime.fromtimestamp(post.created_utc)
-            if created < start_dt.to_pydatetime() or created > pd.to_datetime(banner_start).to_pydatetime():
+
+            # Filter by 14-day pre-window
+            if created < start_dt.to_pydatetime() or created > banner_start.to_pydatetime():
                 continue
-            score = analyzer.polarity_scores(post.title + " " + post.selftext)["compound"]
+
+            # Robust content extraction
+            content = (post.title or "") + " " + (getattr(post, "selftext", "") or "")
+
+            score = analyzer.polarity_scores(content)["compound"]
+
             posts.append([character, post.id, created, score])
 
-    df = pd.DataFrame(posts, columns=["character_5star","post_id","created","sentiment"])
+    df = pd.DataFrame(posts, columns=["character_5star", "post_id", "created", "sentiment"])
+
     return {
         "reddit_posts_14d_pre": len(df),
         "reddit_sentiment_14d_pre": df["sentiment"].mean() if len(df) else 0.0
     }
+
 
 if __name__ == "__main__":
     pass
