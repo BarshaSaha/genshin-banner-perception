@@ -12,7 +12,7 @@ import pandas as pd
 import datetime as dt
 import praw
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from config import DATA_DIR, PRE_BANNER_DAYS
+from config import PRE_BANNER_DAYS
 
 # Fill with your keys
 REDDIT_CLIENT_ID = "..."
