@@ -1,4 +1,13 @@
 # 07_merge_panel.py
+
+# --- SAFE CONFIG LOADER ---
+try:
+    from .config_local import *   # use real local keys (not committed)
+except ImportError:
+    from .config import *         # fallback to public-safe config
+# ---------------------------
+
+
 import pandas as pd
 from config import OUT_DIR
 from twitter_sentiment import fetch_twitter
