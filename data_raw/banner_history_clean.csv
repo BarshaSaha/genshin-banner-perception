@@ -1,1 +1,3 @@
-banner_id,patch,phase,banner_start,banner_end,character_5star
+patch_version,character_5star,banner_start,banner_end,banner_type
+3.2,Nahida,2022-11-02,2022-11-18,NEW
+4.2,Furina,2023-11-08,2023-11-28,NEW
