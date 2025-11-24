@@ -15,7 +15,7 @@ CHAR_DEMO_PLAYLIST = "PLqWr7dyJNgLLcg4CLu_gDuqjRy2VH0zIn"  # Character Demo play
 
 # Influencer channels (edit list as needed)
 #INFLUENCER_CHANNEL_IDS = [
-    # e.g., TenTen, Zy0x, IWinToLose, etc.
+  
 #]
 
 # Time windows
