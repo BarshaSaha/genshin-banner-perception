@@ -1,4 +1,13 @@
 # 06_google_trends.py
+
+# --- SAFE CONFIG LOADER ---
+try:
+    from .config_local import *   # use real local keys (not committed)
+except ImportError:
+    from .config import *         # fallback to public-safe config
+# ---------------------------
+
+
 import pandas as pd
 from pytrends.request import TrendReq
 from config import PRE_BANNER_DAYS
