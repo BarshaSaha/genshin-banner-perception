@@ -1,4 +1,13 @@
 # 02_revenue_genshinlab.py
+
+# --- SAFE CONFIG LOADER ---
+try:
+    from .config_local import *   # use real local keys (not committed)
+except ImportError:
+    from .config import *         # fallback to public-safe config
+# ---------------------------
+
+
 import pandas as pd
 import requests
 from config import DATA_DIR
