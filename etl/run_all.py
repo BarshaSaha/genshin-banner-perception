@@ -4,9 +4,9 @@ PIPELINE = [
     "01_banner_history",
     "02_revenue_genshinlab",
     "03_youtube_stats",
-    "04_reddit_sentiment",
-    "05_twitter_sentiment",
-    "06_google_trends",
+#    "04_reddit_sentiment",
+#   "05_twitter_sentiment",
+#    "06_google_trends",
     "07_merge_panel",
 ]
 
