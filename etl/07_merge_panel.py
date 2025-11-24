@@ -9,9 +9,17 @@ except ImportError:
 
 import pandas as pd
 
-from .05_twitter_sentiment import fetch_twitter
-from .04_reddit_sentiment import fetch_reddit
-from .06_google_trends import fetch_trends
+import pandas as pd
+import importlib
+
+# Dynamically import modules with numeric names
+twitter_mod = importlib.import_module("etl.05_twitter_sentiment")
+reddit_mod = importlib.import_module("etl.04_reddit_sentiment")
+trends_mod = importlib.import_module("etl.06_google_trends")
+
+fetch_twitter = twitter_mod.fetch_twitter
+fetch_reddit = reddit_mod.fetch_reddit
+fetch_trends = trends_mod.fetch_trends
 
 
 def build_panel():
