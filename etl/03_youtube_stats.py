@@ -1,4 +1,13 @@
 # 03_youtube_stats.py
+
+# --- SAFE CONFIG LOADER ---
+try:
+    from .config_local import *   # use real local keys (not committed)
+except ImportError:
+    from .config import *         # fallback to public-safe config
+# ---------------------------
+
+
 import pandas as pd
 from googleapiclient.discovery import build
 from config import YOUTUBE_API_KEY, DATA_DIR
