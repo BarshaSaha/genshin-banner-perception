@@ -9,7 +9,6 @@ except ImportError:
 
 
 import pandas as pd
-from config import OUT_DIR
 
 from .05_twitter_sentiment import fetch_twitter
 from .04_reddit_sentiment import fetch_reddit
