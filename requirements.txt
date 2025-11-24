@@ -1,0 +1,34 @@
+# Core data processing
+pandas>=2.1.0
+numpy>=1.26.0
+
+# Web scraping & HTML parsing
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+lxml>=4.9.3
+
+# YouTube API
+google-api-python-client>=2.104.0
+
+# Reddit API
+praw>=7.7.0
+
+# Twitter/X scraping
+snscrape @ git+https://github.com/JustAnotherArchivist/snscrape.git
+
+# Google Trends
+pytrends>=4.9.2
+
+# Sentiment analysis
+vaderSentiment>=3.3.2
+
+# Modelling (optional — for notebook analysis)
+scikit-learn>=1.3.0
+statsmodels>=0.14.0
+
+# Notebook support
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# Optional: clean terminal output (nice to have)
+rich>=13.5.0
