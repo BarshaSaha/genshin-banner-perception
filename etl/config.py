@@ -11,7 +11,7 @@ YOUTUBE_API_KEY = "AIzaSyDNMg6GL6H_mWwERLih_UD7AoxDvYRe-Ak"
 
 # Official channel / playlists (Genshin Impact official)
 GENSHIN_YT_CHANNEL = "UCiS882YPwZt1NfaM0gR0D9Q"  # GenshinImpact official
-CHAR_DEMO_PLAYLIST = "PLqWr7dyJNgLLcg4CLu_gDuqjRy2VH0zIn"  # Character Demo playlist :contentReference[oaicite:3]{index=3}
+CHAR_DEMO_PLAYLIST = "PLqWr7dyJNgLLcg4CLu_gDuqjRy2VH0zIn"  # Character Demo playlist
 
 # Influencer channels (edit list as needed)
 #INFLUENCER_CHANNEL_IDS = [
