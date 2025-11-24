@@ -10,9 +10,11 @@ except ImportError:
 
 import pandas as pd
 from config import OUT_DIR
-from twitter_sentiment import fetch_twitter
-from reddit_sentiment import fetch_reddit
-from google_trends import fetch_trends
+
+from .05_twitter_sentiment import fetch_twitter
+from .04_reddit_sentiment import fetch_reddit
+from .06_google_trends import fetch_trends
+
 
 def build_panel():
     banners = pd.read_csv("data_raw/banner_history_clean.csv")  # cleaned from raw
