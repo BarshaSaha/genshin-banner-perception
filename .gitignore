@@ -1,33 +1,24 @@
-# Python
+## Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-*.so
 *.egg-info/
-dist/
 build/
+dist/
 
 # Environments
 .venv/
 venv/
 ENV/
 env/
-
-# OS
-.DS_Store
-Thumbs.db
+*.env
 
 # Jupyter
 .ipynb_checkpoints/
 
-# Data outputs (keep structure, not contents, if needed)
-data_out/*.csv
-data_out/*.xlsx
+# Outputs
+data_out/*
+data_raw/*.env
+data_raw/*key*
 
 # Secrets
 etl/config_local.py
-*.env
-
-etl/config_local.py
-*.env
