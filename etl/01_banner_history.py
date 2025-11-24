@@ -11,7 +11,7 @@ except ImportError:
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from config import DATA_DIR
+# from config import DATA_DIR
 
 WIKI_URL = "https://genshin-impact.fandom.com/wiki/Wish/History"
 
