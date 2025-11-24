@@ -20,6 +20,10 @@ def scrape_revenue_genshinlab():
     # Here we simply store placeholder for manual export to keep pipeline robust.
     print("Export revenue CSV from GenshinLab chart UI and save as data_raw/revenue_genshinlab.csv")
     return None
+    
+def main():
+    scrape_revenue_genshinlab()
 
 if __name__ == "__main__":
-    scrape_revenue_genshinlab()
+    main()
+
