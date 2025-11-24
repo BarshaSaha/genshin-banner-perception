@@ -36,6 +36,10 @@ def scrape_banner_history():
     df = pd.DataFrame(rows)
     df.to_csv(DATA_DIR / "banner_history_raw.csv", index=False)
     return df
+    
+def main():
+    scrape_banner_history()
 
 if __name__ == "__main__":
-    scrape_banner_history()
+    main()
+
