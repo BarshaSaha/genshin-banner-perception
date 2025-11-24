@@ -7,7 +7,7 @@ DATA_DIR.mkdir(exist_ok=True)
 OUT_DIR.mkdir(exist_ok=True)
 
 # ---- YouTube API ----
-YOUTUBE_API_KEY = "AIzaSyDNMg6GL6H_mWwERLih_UD7AoxDvYRe-Ak"
+YOUTUBE_API_KEY = "YOUR_KEY_HERE"
 
 # Official channel / playlists (Genshin Impact official)
 GENSHIN_YT_CHANNEL = "UCiS882YPwZt1NfaM0gR0D9Q"  # GenshinImpact official
