@@ -1,4 +1,13 @@
 # 05_twitter_sentiment.py
+
+# --- SAFE CONFIG LOADER ---
+try:
+    from .config_local import *   # use real local keys (not committed)
+except ImportError:
+    from .config import *         # fallback to public-safe config
+# ---------------------------
+
+
 import pandas as pd
 import snscrape.modules.twitter as sntwitter
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
