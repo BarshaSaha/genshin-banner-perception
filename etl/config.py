@@ -21,3 +21,7 @@ CHAR_DEMO_PLAYLIST = "PLqWr7dyJNgLLcg4CLu_gDuqjRy2VH0zIn"  # Character Demo play
 # Time windows
 PRE_BANNER_DAYS = 14
 TRAILER_WINDOW_DAYS = 7
+
+# Directory paths
+DATA_DIR = Path("data_raw")
+OUT_DIR = Path("data_out")
