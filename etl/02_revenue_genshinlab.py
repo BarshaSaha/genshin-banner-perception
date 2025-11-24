@@ -10,7 +10,7 @@ except ImportError:
 
 import pandas as pd
 import requests
-from config import DATA_DIR
+# from config import DATA_DIR
 
 GENSHINLAB_URL = "https://genshinlab.com/genshin-impact-revenue-chart/"
 
