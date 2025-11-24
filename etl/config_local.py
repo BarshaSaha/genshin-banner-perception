@@ -1,4 +1,4 @@
-YOUTUBE_API_KEY = "XXXYYY"
+YOUTUBE_API_KEY = "AIzaSyDNMg6GL6H_mWwERLih_UD7AoxDvYRe-Ak"
 
 REDDIT_CLIENT_ID = "<your real ID>"
 REDDIT_CLIENT_SECRET = "<your real secret>"
