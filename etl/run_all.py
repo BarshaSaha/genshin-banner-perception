@@ -1,10 +1,14 @@
 import importlib
 
-PIPELINE = [
+pipeline = [
+    "00_character_list",
     "01_banner_history",
     "02_revenue_genshinlab",
     "03_youtube_stats",
-    "07_merge_panel",   # 04–06 are called INSIDE this script
+    # "04_reddit_sentiment",   # optional, you can choose to run these explicitly
+    # "05_twitter_sentiment",
+    # "06_google_trends",
+    "07_merge_panel"
 ]
 
 def main():
