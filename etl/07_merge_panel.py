@@ -2,11 +2,10 @@
 
 # --- SAFE CONFIG LOADER ---
 try:
-    from .config_local import *   # use real local keys (not committed)
+    from .config_local import *
 except ImportError:
-    from .config import *         # fallback to public-safe config
+    from .config import *
 # ---------------------------
-
 
 import pandas as pd
 
