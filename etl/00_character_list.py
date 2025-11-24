@@ -21,16 +21,16 @@ def scrape_character_list():
     tables = soup.find_all("table")
     rows = []
 
-   # for t in tables:
-   #     for tr in t.find_all("tr")[1:]:
-   #         tds = [td.get_text(" ", strip=True) for td in tr.find_all(["td","th"])]
-   #         if len(tds) < 3:
-   #             continue
-   #         # heuristic parse: banner name + dates + 5★
-   #         row_txt = " | ".join(tds)
-   #         if "—" not in row_txt and "-" not in row_txt:
-   #             continue
-   #         rows.append(tds)
+    for t in tables:
+        for tr in t.find_all("tr")[1:]:
+            tds = [td.get_text(" ", strip=True) for td in tr.find_all(["td","th"])]
+            if len(tds) < 5:
+                continue
+            # heuristic parse: banner name + dates + 5★
+            row_txt = " | ".join(tds)
+            if "—" not in row_txt and "-" not in row_txt:
+                continue
+            rows.append(tds)
 
     df = pd.DataFrame(rows)
     df.to_csv(DATA_DIR / "character_list.csv", index=False)
